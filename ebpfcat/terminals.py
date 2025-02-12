@@ -28,6 +28,20 @@ class Skip(EBPFTerminal):
         pass
 
 
+class EL4102(EBPFTerminal):
+    compatibility = {(2, 0x10063052)}
+    
+    ch1_value = ProcessDesc(0x3001, 1)
+    ch2_value = ProcessDesc(0x3002, 1)
+    
+
+class EL3612(EBPFTerminal):
+    compatibility = {(2, 0x0E1C3052)}
+    
+    ch1_value = ProcessDesc(0x6000, 0x11)
+    ch2_value = ProcessDesc(0x6010, 0x11)
+
+
 class EL1808(EBPFTerminal):
     compatibility = {(2, 118501458), (2, 0x3F03052)}
 
